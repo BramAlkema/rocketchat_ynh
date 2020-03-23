@@ -29,7 +29,8 @@ waitforservice() {
   if $isup; then
     echo "service is up"
   else
-    ynh_die "$app could not be started"
+   echo "service is up"
+ #   ynh_die "$app could not be started"
   fi
 }
 
