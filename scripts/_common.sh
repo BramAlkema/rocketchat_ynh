@@ -7,7 +7,7 @@ NODE_VERSION=12.14.0
 DEBIAN_ISSUE=$(grep 9 /etc/debian_version >/dev/null && echo stretch || echo jessie)
 
 checkcmd() {
-  curl -m 1 -s localhost:$port$path/api/v1/info | \
+  curl -m 1 -s localhost:$port$path/api/info | \
     python -c "import sys, json; print json.load(sys.stdin)['success']" 2>/dev/null | \
     grep "True" >/dev/null 2>&1
 }
