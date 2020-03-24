@@ -10,7 +10,7 @@ checkcmd() {
 #  curl -m 1 -s localhost:$port$path/api/info | \
   curl -m 1 -s localhost:$port/api/info | \
     python -c "import sys, json; print json.load(sys.stdin)["success"]" 2>/dev/null | \
-    grep "rue" >/dev/null 2>&1
+    grep "true" >/dev/null 2>&1
 }
 
 waitforservice() {
